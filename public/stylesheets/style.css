@@ -1,0 +1,34 @@
+.err{
+    color: red;
+}
+
+body{
+    padding: 0px;
+    overflow-x: hidden;
+  } 
+  .login{
+     background-color: white;
+     height: 500px;
+     width: 400px;
+     border-radius: 10px;
+     border: 1px solid;
+     border-color: grey;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 10%;
+  }
+
+ 
+  .login a{
+    text-decoration: none;
+    color: grey;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   .dropdown{
+     align-items: flex-end;
+   }

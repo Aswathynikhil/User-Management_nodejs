@@ -1,0 +1,41 @@
+<section>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="admin-operations">
+        <a href="/admin/create-user" class="btn btn-dark mt-4">Create User</a>
+        </div>
+      </div>
+        <table class="table" id="userTable">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Place</th>
+      <th scope="col">Address</th>
+       <th scope="col">PhnNo</th>
+        <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each userinfo}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.place}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.phone}}</td>
+      <td>
+        <a href="/admin/edit-user/{{this._id}}" class="btn btn-dark">Edit</a>
+        <a href="/admin/delete-user/{{this._id}}" class="btn btn-dark" onclick="return confirm('Are you want to delete{{this.name}}?')">Delete</a>
+      </td>
+      
+    </tr>
+    {{/each}}
+ </tbody>
+</table>
+    </div>
+</section>
+
+<script>
+  $(document).ready( function () {
+    $("#userTable").DataTable();
+} );
+</script>
